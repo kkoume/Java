@@ -17,6 +17,7 @@ public class ForTest {
 		// 1부터 10까지 합
 		int sum = 0;
 		
+		
 		for(int k=1 ; k<=10 ; k++) {
 			sum += k;  // sum = sum + k;
 		}
