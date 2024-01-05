@@ -1,5 +1,40 @@
 package test3;
 
-public class Test09 {
+/*
+ * 날짜 : 2024/01/04
+ * 이름 : 조영흥
+ * 내용 : 추상클래스, 다형성 연습문제
+ */
+abstract class Shape {
+	public abstract void draw();
+}
 
+class Triangle extends Shape {
+	public void draw() {
+		System.out.println("draw Triangle!");
+	}
+}
+
+
+class Circle extends Shape {
+	public void draw() {
+		System.out.println("draw Circle!");
+	}
+}
+
+public class Test09 {
+	public static void main(String[] args) {
+		
+		Test09 here = new Test09();
+		
+		Circle circle = new Circle();
+		Triangle triangle = new Triangle();
+		
+		here.draw(circle);
+		here.draw(triangle);
+	}
+	
+	public void draw(Shape obj) {
+		obj.draw();
+	}
 }
