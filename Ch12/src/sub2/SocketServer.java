@@ -69,6 +69,6 @@ public class SocketServer {
 			}
 		}
 		
-		System.out.println("Client 종료...");
+		System.out.println("Server 종료...");
 	}
 }
