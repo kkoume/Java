@@ -1,7 +1,6 @@
 package com.myshop.db;
 
 public class SQL {
-	
 	// Customer
 	public static final String INSERT_CUSTOMER = "INSERT INTO `Customer` SET "
 												+ "`custId`=?,"
@@ -9,33 +8,38 @@ public class SQL {
 												+ "`hp`=?,"
 												+ "`addr`=?,"
 												+ "`rdate`=NOW()";
-	
+
 	public static final String SELECT_CUSTOMER = "SELECT * FROM `Customer` WHERE `custId`=?";
 	public static final String SELECT_CUSTOMERS = "";
 	public static final String UPDATE_CUSTOMER = "";
 	public static final String DELETE_CUSTOMER = "";
-
+	
 	// Order
 	public static final String INSERT_ORDER = "INSERT INTO `Order` SET "
-											 + "`orderNo`=?,"
-											 + "`orderId`=?,"
-											 + "`orderProduct`=?,"
-											 + "`orderCount`=?,"
-											 + "`orderDate`=NOW()";
+											+ "`orderId`=?,"
+											+ "`orderProduct`=?,"
+											+ "`orderCount`=?,"
+											+ "`orderDate`=NOW()";
+	
 	public static final String SELECT_ORDER = "";
-	public static final String SELECT_ORDERS = "SELECT a.*, `prodName`, `price`, `company` FROM `order` as a "
+	public static final String SELECT_ORDERS = "SELECT a.*, `prodName`, `price`, `company` FROM `order` AS a "
 											 + "JOIN `Product` as b on a.orderProduct = b.prodNo "
 											 + "WHERE `orderId`=? "
 											 + "ORDER BY `orderDate` DESC";
-	
 	public static final String UPDATE_ORDER = "";
 	public static final String DELETE_ORDER = "";
 	
 	// Product
 	public static final String INSERT_PRODUCT = "";
 	public static final String SELECT_PRODUCT = "";
-	public static final String SELECT_PRODUCTS = "";
+	public static final String SELECT_PRODUCTS = "SELECT * FROM `product`";
 	public static final String UPDATE_PRODUCT = "";
+	public static final String UPDATE_PRODUCT_STOCK = "UPDATE `Product` SET `stock` = `stock` - ? "
+													+ "WHERE `prodNo`=?";
+	
 	public static final String DELETE_PRODUCT = "";
+	
+	
+	
 	
 }

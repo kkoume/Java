@@ -8,7 +8,7 @@ public class OrderDTO {
 	private int orderCount;
 	private String orderDate;
 	
-	//추가필드
+	// 추가필드
 	private String prodName;
 	private int price;
 	private String company;
@@ -33,7 +33,6 @@ public class OrderDTO {
 	public void setCompany(String company) {
 		this.company = company;
 	}
-	
 	
 	public int getOrderNo() {
 		return orderNo;
@@ -65,17 +64,15 @@ public class OrderDTO {
 	public void setOrderDate(String orderDate) {
 		this.orderDate = orderDate;
 	}
-	
 	@Override
 	public String toString() {
-		return orderNo + ", " 
+		return orderNo + "," 
 				+ orderId + "," 
 				+ orderProduct + "," 
 				+ prodName + "," 
-				+ price + ","
-				+ company + ","
-				+ orderCount + ","
+				+ price + "," 
+				+ company + "," 
+				+ orderCount + "," 
 				+ orderDate;
 	}
-	
 }

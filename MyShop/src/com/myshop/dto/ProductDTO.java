@@ -1,9 +1,9 @@
 package com.myshop.dto;
 
 public class ProductDTO {
-
+	
 	private int prodNo;
-	private String prodname;
+	private String prodName;
 	private int stock;
 	private int price;
 	private String company;
@@ -14,11 +14,11 @@ public class ProductDTO {
 	public void setProdNo(int prodNo) {
 		this.prodNo = prodNo;
 	}
-	public String getProdname() {
-		return prodname;
+	public String getProdName() {
+		return prodName;
 	}
-	public void setProdname(String prodname) {
-		this.prodname = prodname;
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
 	}
 	public int getStock() {
 		return stock;
@@ -38,11 +38,9 @@ public class ProductDTO {
 	public void setCompany(String company) {
 		this.company = company;
 	}
-	
 	@Override
 	public String toString() {
-		return "ProductDTO [prodNo=" + prodNo + ", prodname=" + prodname + ", stock=" + stock + ", price=" + price
+		return "ProductDTO [prodNo=" + prodNo + ", prodName=" + prodName + ", stock=" + stock + ", price=" + price
 				+ ", company=" + company + "]";
 	}
-	
 }
